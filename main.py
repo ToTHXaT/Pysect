@@ -5,7 +5,6 @@ from requests import Response
 from termcolor import colored
 from pydantic import BaseModel
 
-from src.expectations.base import *
 from src.base.BaseTest import *
 
 BASE_URL = "https://5f8ad2fb8453150016706248.mockapi.io/api/"
@@ -25,35 +24,35 @@ class TestSmth(BaseTest):
     url = 'https://www.google.com/'
 
     def test_smth(self) -> List[Explanation]:
-        response = self._send_request()
+        self.send_request()
 
-        return expect(response, [
+        return self.expect([
             HeaderToBePresent('Content-Type'),
             StatusCodeToBeSuccessful()
         ])
 
     def test_error(self) -> List[Explanation]:
-        response = self._send_request(path='some')
+        self.send_request(path='some')
 
-        return expect(response, [
+        return self.expect([
             HeaderToBePresent('Content-Type'),
             StatusCodeToBeClientError()
         ])
 
     def test_mock(self) -> List[Explanation]:
-        response = self._send_request(url=BASE_URL, path='user')
+        self.send_request(url=BASE_URL, path='user')
 
-        return expect(response, [
+        return self.expect([
             StatusCodeToBeSuccessful(),
-            HeaderToBeEqual('Content-Type', 'application/json'),
+            HeaderToBeEqual('Content-Type', 'text/html'),
             JSONToBeMatchingSchema(UserListSchema)
         ])
 
     def test_post(self) -> List[Explanation]:
-        response = self._send_request(url=BASE_URL, path='user', method='POST',
+        self.send_request(url=BASE_URL, path='user', method='POST',
                                       json_body={'name': 'Gans', 'money': '0.00'})
 
-        return expect(response, [
+        return self.expect([
             StatusCodeToBeSuccessful(),
             JSONToBeMatchingSchema(UserSchema)
         ])

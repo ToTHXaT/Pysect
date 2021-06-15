@@ -1,13 +1,9 @@
 from typing import Dict, List
 
-import requests
 from termcolor import colored
+import requests
 
 from src.expectations.base import *
-
-
-def expect(response: Response, expectations) -> List[Explanation]:
-    return [exp for exp in [i.is_meeting(response) for i in expectations] if isinstance(exp, Explanation)]
 
 
 class BaseTest:
@@ -17,6 +13,8 @@ class BaseTest:
     method = "GET"
     url = ""
     json_body = {}
+    response: Response
+    explanations: List[Explanation]
 
     def set_headers(self, headers: Dict[str, str]):
         self.headers.update(**headers)
@@ -33,6 +31,9 @@ class BaseTest:
     def set_method(self, method: str):
         self.method = method
 
+    def expect(self, expectations):
+        self.explanations = [exp for exp in [i.is_meeting(self.response) for i in expectations] if isinstance(exp, Explanation)]
+
     def run_tests(self):
         test_funcs = [func for func in dir(self) if func.startswith('test_') and callable(getattr(self, func))]
 
@@ -40,18 +41,19 @@ class BaseTest:
             raise Exception("No test functions to run tests")
 
         for func in test_funcs:
-            explanations = getattr(self, func)()
-            if explanations.__len__() < 1:
+            getattr(self, func)()
+            if self.explanations.__len__() < 1:
                 print(colored('Passed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
                               'green', attrs=['bold']))
             else:
                 print(colored('Failed at ' + __name__ + '.' + self.__class__.__name__ + '.' + func,
                               'red', attrs=['bold', 'underline']))
 
-                for i in explanations:
+                for i in self.explanations:
                     print('    ', colored(i, 'red'))
+                self.explanations.clear()
 
-    def _send_request(self, **kwargs):
+    def send_request(self, **kwargs):
         method = kwargs.get('method') or self.method
         url = kwargs.get('url') or self.url
         url += kwargs.get('path', '')
@@ -60,6 +62,13 @@ class BaseTest:
         query_params = {**self.query_params, **kwargs.get('query_params', {})}
 
         if method.upper() == 'GET':
-            return requests.get(url, params=query_params, headers=headers)#, hooks={'response': print_req_res})
+            self.response = requests.get(url, params=query_params, headers=headers)
         if method.upper() == 'POST':
-            return requests.post(url, params=query_params, headers=headers, data=json_body)
+            self.response = requests.post(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'PUT':
+            self.response = requests.put(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'DELETE':
+            self.response = requests.delete(url, params=query_params, headers=headers, data=json_body)
+        if method.upper() == 'OPTIONS':
+            self.response = requests.options(url, params=query_params, headers=headers, data=json_body)
+
